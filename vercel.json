@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "regions": ["sin1"], 
+  "builds": [
+    { "src": "*.php", "use": "vercel-php@0.7.4" },
+    { "src": "app/**/*.php", "use": "vercel-php@0.7.4" },
+    { "src": "api/**/*.php", "use": "vercel-php@0.7.4" },
+    { "src": "assets/**", "use": "@vercel/static" },
+    { "src": "style.css", "use": "@vercel/static" },
+    { "src": "style/**", "use": "@vercel/static" },
+    { "src": "font.css", "use": "@vercel/static" },
+    { "src": "font/**", "use": "@vercel/static" },
+    { "src": "branding.webp", "use": "@vercel/static" },
+    { "src": "paralax.webp", "use": "@vercel/static" },
+    { "src": "favicon/**", "use": "@vercel/static" },
+    { "src": "script.js", "use": "@vercel/static" }
+  ],
+  "routes": [
+    {
+      "src": "/app/proses/login/cmslogin-proses.php",
+      "dest": "/app/proses/login/cmslogin-proses.php"
+    },
+    {
+      "src": "/app/(.*)",
+      "dest": "/app/$1"
+    },
+    {
+      "src": "/favicon/(.*)",
+      "dest": "/favicon/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/style/(.*)",
+      "dest": "/style/$1"
+    },
+    {
+      "src": "/font/(.*)",
+      "dest": "/font/$1"
+    },
+    {
+      "src": "/(.*)\\.(css|js|webp|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|json|map)$",
+      "dest": "/$1.$2"
+    },
+    { "handle": "filesystem" },
+    {
+      "src": "/(.*)",
+      "dest": "/index.php"
+    }
+  ]
+}

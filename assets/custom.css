@@ -1,0 +1,40 @@
+ html,
+ body {
+     height: 100%;
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .navbar {
+     z-index: 1000;
+ }
+
+ .sidebar {
+     position: fixed;
+     top: 70px;
+     left: 0;
+     width: 200px;
+     height: calc(100% - 70px);
+     background-color: #135ba3;
+     padding-top: 20px;
+     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .sidebar a {
+     display: block;
+     color: white;
+     padding: 10px 20px;
+     text-decoration: none;
+ }
+
+ .sidebar a:hover {
+     background-color: #0d3e6a;
+ }
+
+ .main-content {
+     margin-left: 200px;
+     padding: 20px;
+     flex: 1;
+     margin-top: 56px;
+ }

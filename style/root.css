@@ -1,0 +1,167 @@
+:root {
+    --sidebar-width: 260px;
+    --sidebar-width-collapsed: 70px;
+}
+
+:root, [data-bs-theme="dark"] {
+    --color-bg-primary: #081120;
+    --color-bg-secondary: #101b31;
+    --color-bg-card: #15233d;
+
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+
+    --color-border: rgba(99, 102, 241, 0.15);
+
+    --gradient-main: linear-gradient(
+        135deg,
+        #081120 0%,
+        #102040 55%,
+        #1b1b3a 100%
+    );
+
+    --gradient-card: linear-gradient(
+        180deg,
+        rgba(30, 41, 59, 0.95),
+        rgba(15, 23, 42, 0.95)
+    );
+
+    --gradient-button: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    --shadow-blue: 0 15px 35px rgba(37, 99, 235, 0.15);
+}
+
+[data-bs-theme="light"] {
+    --color-bg-primary: #f8f9fa;
+    --color-bg-secondary: #ffffff;
+    --color-bg-card: #ffffff;
+
+    --color-text: #212529;
+    --color-text-muted: #6c757d;
+
+    --color-border: rgba(0, 0, 0, 0.08);
+
+    --gradient-main: linear-gradient(
+        135deg,
+        #f8f9fa 0%,
+        #e9ecef 55%,
+        #dee2e6 100%
+    );
+
+    --gradient-card: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(248, 249, 250, 0.95)
+    );
+
+    --gradient-button: linear-gradient(
+        135deg,
+        #0d6efd,
+        #0056b3
+    );
+
+    --shadow-blue: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.5);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(99, 102, 241, 0.3) transparent;
+}
+
+/* Nonaktifkan transisi tema saja pada elemen yang berubah tema */
+:root, body, .navbar, .sidebar, .app-sidebar, .sidebar-nav a, .app-sidebar-nav a, .theme-toggle i, .app-sidebar-logout, .card, .stat-card, .dashboard-menu-card, footer, .card-body, .card-feature, .cta-box {
+    transition: none !important;
+}
+
+/* Aktifkan kembali transisi untuk sidebar humberger menu (index) */
+.sidebar {
+    transition: right 0.3s ease !important;
+}
+
+.sidebar-overlay {
+    transition: opacity 0.3s ease !important;
+}
+
+.sidebar-close {
+    transition: opacity 0.2s ease !important;
+}
+
+/* Aktifkan kembali transisi untuk app sidebar (dashboard) */
+.app-sidebar {
+    transition: width var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)),
+                left 0.3s ease !important;
+}
+
+body.has-sidebar {
+    transition: padding-left var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)) !important;
+}
+
+body.has-sidebar .navbar.fixed-top {
+    transition: left var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)),
+                width var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)) !important;
+}
+
+
+
+.app-sidebar-brand-text,
+.app-sidebar-link-text {
+    transition: opacity var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)),
+                transform var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)),
+                width var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)),
+                margin-left var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)) !important;
+}
+
+.app-sidebar-collapse-btn {
+    transition: opacity var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)) !important;
+}
+
+.app-sidebar-expand-btn {
+    transition: opacity var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)) !important;
+}
+
+.app-sidebar-nav a,
+.app-sidebar-logout {
+    transition: padding var(--sidebar-transition-duration, 0.35s) var(--sidebar-transition-ease, cubic-bezier(0.4, 0, 0.2, 1)) !important;
+}
+
+body {
+    background: var(--gradient-main);
+    color: var(--color-text);
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-top: 70px; 
+}
+
+body, html {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+
+

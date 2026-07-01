@@ -1,0 +1,111 @@
+:root,
+[data-bs-theme="dark"] {
+    --color-bg-primary: #081132;
+    --color-bg-secondary: #101b31;
+    --color-bg-card: #15233d;
+
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+
+    --color-border: rgba(99, 102, 241, 0.15);
+
+    --gradient-main: linear-gradient(
+        135deg,
+        #081132 0%,
+        #102040 55%,
+        #1b1b3a 100%
+    );
+
+    --gradient-card: linear-gradient(
+        180deg,
+        rgba(30, 41, 59, 0.95),
+        rgba(15, 23, 42, 0.95)
+    );
+
+    --gradient-button: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    --shadow-blue: 0 15px 35px rgba(37, 99, 235, 0.15);
+    --sidebar-width: 260px;
+    --sidebar-width-collapsed: 70px;
+}
+
+[data-bs-theme="light"] {
+    --color-bg-primary: #f8fafc;
+    --color-bg-secondary: #ffffff;
+    --color-bg-card: #ffffff;
+
+    --color-text: #1e293b;
+    --color-text-muted: #64748b;
+
+    --color-border: rgba(99, 102, 241, 0.2);
+
+    --gradient-main: linear-gradient(
+        135deg,
+        #f1f5f9 0%,
+        #e2e8f0 55%,
+        #cbd5e1 100%
+    );
+
+    --gradient-card: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(248, 250, 252, 0.95)
+    );
+
+    --gradient-button: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    --shadow-blue: 0 15px 35px rgba(37, 99, 235, 0.1);
+    --sidebar-width: 260px;
+    --sidebar-width-collapsed: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.5);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(99, 102, 241, 0.3) transparent;
+}
+
+body {
+    background: var(--gradient-main);
+    color: var(--color-text);
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-top: 70px;
+}
+
+body, html {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+
+

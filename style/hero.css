@@ -1,0 +1,46 @@
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(
+        circle,
+        rgba(59,130,246,.18),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+[data-bs-theme="light"] .hero-section::before {
+    background: radial-gradient(
+        circle,
+        rgba(13,110,253,.08),
+        transparent 70%
+    );
+}
+
+@media (max-width: 767px) {
+    .hero-section::before {
+        width: 400px;
+        height: 400px;
+        top: -200px;
+    }
+}
+
+.hero-section h1 {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section p {
+    position: relative;
+    z-index: 2;
+}
